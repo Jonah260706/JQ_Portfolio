@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonah Quadros | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9d4edd',
+                        accent: '#7b2cbf',
+                        dark: '#0b090a',
+                        darker: '#070606',
+                        light: '#f8f9fa',
+                        gray: '#6c757d'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        
+        .circle {
+            border-radius: 50%;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-color: #9d4edd;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1.5px;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: #070606;
+            border: 4px solid #9d4edd;
+            top: 50%;
+            border-radius: 50%;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-light font-poppins overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full py-5 z-50 transition-all duration-300 bg-darker/95 glass-effect">
+        <div class="w-11/12 max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-primary hover:text-accent transition-colors duration-300">JQ</a>
+            <div class="lg:hidden">
+                <button id="menu-btn" class="text-2xl text-light cursor-pointer">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul id="nav-links" class="hidden lg:flex items-center space-x-8">
+                <li><a href="#home" class="text-lg font-medium text-light hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Home</a></li>
+                <li><a href="#skills" class="text-lg font-medium text-light hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Skills</a></li>
+                <li><a href="#education" class="text-lg font-medium text-light hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Education</a></li>
+                <li><a href="#contact" class="text-lg font-medium text-light hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed top-[70px] left-0 w-full h-screen bg-dark lg:hidden -translate-x-full transition-transform duration-300">
+            <ul class="flex flex-col items-center justify-center space-y-6 h-full">
+                <li><a href="#home" class="text-2xl font-medium">Home</a></li>
+                <li><a href="#skills" class="text-2xl font-medium">Skills</a></li>
+                <li><a href="#education" class="text-2xl font-medium">Education</a></li>
+                <li><a href="#contact" class="text-2xl font-medium">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen bg-darker flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl animate-pulse-slow"></div>
+        <div class="w-11/12 max-w-6xl mx-auto z-10">
+            <div class="grid lg:grid-cols-5 gap-12 items-center">
+                <div class="lg:col-span-3 space-y-6">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                        Jonah <span class="text-primary">Quadros</span>
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-primary font-semibold">Creative Technologist & Student</h2>
+                    <p class="text-lg max-w-2xl">
+                        I'm a creative and tech-savvy individual with a passion for leveraging AI and technology to solve problems and create impactful content. With experience in video and photo editing, web development, and a growing YouTube channel, I bring a unique blend of creativity and technical expertise.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#contact" class="px-8 py-4 bg-primary hover:bg-transparent border-2 border-primary text-light font-semibold rounded-full transition-all duration-300 text-center">Get In Touch</a>
+                        <a href="#skills" class="px-8 py-4 bg-transparent hover:bg-light hover:text-darker border-2 border-light text-light font-semibold rounded-full transition-all duration-300 text-center">View My Skills</a>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 circle border-2 to-accent shadow-xl p-1 animate-float">
+                        <div class="w-full h-full rounded-full overflow-hidden">
+                            <img src="pfp.jpg" alt="Jonah Quadros" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 lg:py-32 bg-dark">
+        <div class="w-11/12 max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-3/5 after:h-1 after:bg-primary">My Skills</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="group bg-white/5 hover:bg-gradient-to-br hover:from-primary/20 hover:to-accent/20 p-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Video & Photo Editing</h3>
+                    <p class="text-gray">Proficient in video editing tools such as Adobe Premiere Pro and CapCut, as well as photo editing software like Adobe Photoshop.</p>
+                </div>
+                
+                <!-- Skill Card 2 -->
+                <div class="group bg-white/5 hover:bg-gradient-to-br hover:from-primary/20 hover:to-accent/20 p-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI Tools</h3>
+                    <p class="text-gray">Skilled in leveraging the latest AI tools for content creation, including image generation, video effects, and text design enhancements.</p>
+                </div>
+                
+                <!-- Skill Card 3 -->
+                <div class="group bg-white/5 hover:bg-gradient-to-br hover:from-primary/20 hover:to-accent/20 p-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+                    <p class="text-gray">Knowledgeable in web development and programming languages such as CSS, JavaScript, and Python.</p>
+                </div>
+                
+                <!-- Skill Card 4 -->
+                <div class="group bg-white/5 hover:bg-gradient-to-br hover:from-primary/20 hover:to-accent/20 p-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI Solutions</h3>
+                    <p class="text-gray">Experienced in exploring and implementing AI-driven solutions to optimize workflows and improve efficiency.</p>
+                </div>
+                
+                <!-- Skill Card 5 -->
+                <div class="group bg-white/5 hover:bg-gradient-to-br hover:from-primary/20 hover:to-accent/20 p-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Leadership</h3>
+                    <p class="text-gray">Developed strong team-building and leadership skills through competitive sports and collaborative environments.</p>
+                </div>
+                
+                <!-- Skill Card 6 -->
+                <div class="group bg-white/5 hover:bg-gradient-to-br hover:from-primary/20 hover:to-accent/20 p-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Communication</h3>
+                    <p class="text-gray">Excellent communication and interpersonal skills, fostering meaningful connections and effective collaboration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 lg:py-32 bg-darker relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl"></div>
+        <div class="w-11/12 max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-3/5 after:h-1 after:bg-primary">Education & Experience</h2>
+            
+            <div class="timeline relative">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item pb-8 pl-0 pr-10 md:w-1/2 md:pl-0 md:pr-16 relative">
+                    <div class="bg-white/5 p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:bg-gradient-to-r hover:from-primary/10 hover:to-transparent transition-all duration-300">
+                        <p class="text-primary font-semibold mb-2">March 2022</p>
+                        <h3 class="text-xl font-bold mb-3">Secured 82.6% in SSC</h3>
+                        <p>St. Mary's High School, Kalina</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item pb-8 pl-10 pr-0 md:w-1/2 md:left-1/2 md:pl-16 md:pr-0 relative">
+                    <div class="bg-white/5 p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:bg-gradient-to-r hover:from-primary/10 hover:to-transparent transition-all duration-300">
+                        <p class="text-primary font-semibold mb-2">September 2022 - March 2024</p>
+                        <h3 class="text-xl font-bold mb-3">Secured 81.83% in HSC</h3>
+                        <p>St. Xavier's College, Fort</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item pb-8 pl-0 pr-10 md:w-1/2 md:pl-0 md:pr-16 relative">
+                    <div class="bg-white/5 p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:bg-gradient-to-r hover:from-primary/10 hover:to-transparent transition-all duration-300">
+                        <p class="text-primary font-semibold mb-2">October 2024 - Present</p>
+                        <h3 class="text-xl font-bold mb-3">Bachelors in Technology</h3>
+                        <p>Fr. Conceicao Rodrigues College of Engineering</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item pb-8 pl-10 pr-0 md:w-1/2 md:left-1/2 md:pl-16 md:pr-0 relative">
+                    <div class="bg-white/5 p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:bg-gradient-to-r hover:from-primary/10 hover:to-transparent transition-all duration-300">
+                        <p class="text-primary font-semibold mb-2">August 2024</p>
+                        <h3 class="text-xl font-bold mb-3">Mastery Manifestor</h3>
+                        <p>Launched a YouTube channel as a creative experiment, achieving 3,000+ views within a short period.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 lg:py-32 bg-dark">
+        <div class="w-11/12 max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-3/5 after:h-1 after:bg-primary">Get In Touch</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xl flex-shrink-0">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Email</h3>
+                            <p class="text-gray text-lg">jonahquadros@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-6">
+                        <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xl flex-shrink-0">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Phone</h3>
+                            <p class="text-gray text-lg">+91 9769587241</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-6">
+                        <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xl flex-shrink-0">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Location</h3>
+                            <p class="text-gray text-lg">Mumbai Suburban, India</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media Links -->
+                    <div class="pt-8">
+                        <h3 class="text-xl font-bold mb-6">Find Me On</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white/5 p-8 rounded-2xl shadow-lg">
+                    <form>
+                        <div class="mb-6">
+                            <input type="text" class="w-full p-4 bg-white/10 border-none rounded-lg focus:bg-white/15 focus:outline-none focus:ring-2 focus:ring-primary text-light placeholder-gray transition-all duration-300" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-6">
+                            <input type="email" class="w-full p-4 bg-white/10 border-none rounded-lg focus:bg-white/15 focus:outline-none focus:ring-2 focus:ring-primary text-light placeholder-gray transition-all duration-300" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-6">
+                            <input type="text" class="w-full p-4 bg-white/10 border-none rounded-lg focus:bg-white/15 focus:outline-none focus:ring-2 focus:ring-primary text-light placeholder-gray transition-all duration-300" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-6">
+                            <textarea class="w-full p-4 bg-white/10 border-none rounded-lg focus:bg-white/15 focus:outline-none focus:ring-2 focus:ring-primary text-light placeholder-gray transition-all duration-300 min-h-[150px] resize-y" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-8 py-4 bg-primary hover:bg-accent text-light font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-darker">
+        <div class="w-11/12 max-w-6xl mx-auto text-center">
+            <p class="text-gray text-sm">© 2025 Jonah Quadros. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+        });
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-x-full');
+            });
+        });
+        
+        // Sticky Header Effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-3', 'shadow-lg');
+                header.classList.remove('py-5');
+            } else {
+                header.classList.add('py-5');
+                header.classList.remove('py-3', 'shadow-lg');
+            }
+        });
+        
+        // Reveal animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.skill-card, .timeline-item, .contact-item').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
