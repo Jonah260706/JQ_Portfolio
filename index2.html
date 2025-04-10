@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonah Quadros | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9d4edd',
+                        accent: '#7b2cbf',
+                        dark: '#0b090a',
+                        darker: '#070606',
+                        light: '#f8f9fa',
+                        gray: '#6c757d'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite', /* Reduced duration */
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite', /* Reduced duration */
+                        'bounce-slow': 'bounce 2.5s infinite', /* Reduced duration */
+                        'gradient': 'gradient 8s ease infinite', /* Reduced duration */
+                        'shine': 'shine 1.5s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' }, /* Reduced distance */
+                        },
+                        bounce: {
+                            '0%, 100%': { transform: 'translateY(-15px)' },
+                            '50%': { transform: 'translateY(0)' },
+                        },
+                        gradient: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                            '100%': { backgroundPosition: '0% 50%' },
+                        },
+                        shine: {
+                            '0%': { backgroundPosition: '200% center' },
+                            '100%': { backgroundPosition: '-200% center' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        html { scroll-behavior: smooth; } /* Ensure smooth scrolling */
+
+        body {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239d4edd' fill-opacity='0.03'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+        
+        .gradient-text {
+          background: linear-gradient(45deg, #9d4edd, #7b2cbf, #5a189a, #3c096c);
+          background-size: 200% auto;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          animation: gradient 6s ease infinite; /* Reduced duration */
+        }
+        
+        .shimmer {
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+          background-size: 200% 100%;
+          animation: shine 1.5s infinite;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-color: #9d4edd;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1.5px;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: #070606;
+            border: 4px solid #9d4edd;
+            top: 50%;
+            border-radius: 50%;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+                right: auto;
+            }
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Progress Bar */
+        .progress-bar {
+            height: 3px;
+            background: linear-gradient(90deg, #9d4edd, #7b2cbf);
+            width: 0%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            transition: width 0.3s ease;
+        }
+        
+        /* Custom cursor animations removed for performance */
+        
+        .skill-card:hover {
+            transform: translateY(-6px) scale(1.01); /* Slightly reduced hover effect */
+            box-shadow: 0 20px 25px -5px rgba(157, 78, 221, 0.15), 0 10px 10px -5px rgba(157, 78, 221, 0.1);
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 15px 5px rgba(157, 78, 221, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-light font-poppins overflow-x-hidden">
+    <!-- Custom Cursor Removed -->
+    
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full py-5 z-50 transition-all duration-300 bg-darker/90 glass-effect">
+        <div class="w-11/12 max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold gradient-text hover:scale-105 transition-all duration-300">JQ</a>
+            <div class="lg:hidden">
+                <button id="menu-btn" class="text-2xl text-light cursor-pointer">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul id="nav-links" class="hidden lg:flex items-center space-x-8">
+                <li><a href="#home" class="text-lg font-medium text-light hover:text-primary transition-colors duration-300 relative group">
+                    Home
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a></li>
+                <li><a href="#skills" class="text-lg font-medium text-light hover:text-primary transition-colors duration-300 relative group">
+                    Skills
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a></li>
+                <li><a href="#education" class="text-lg font-medium text-light hover:text-primary transition-colors duration-300 relative group">
+                    Education
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a></li>
+                <li><a href="#contacts" class="text-lg font-medium text-light hover:text-primary transition-colors duration-300 relative group">
+                    Contact
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a></li>
+            </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-dark/95 backdrop-blur-md lg:hidden transform -translate-x-full transition-transform duration-500 ease-in-out z-40 pt-20">
+            <ul class="flex flex-col items-center justify-center space-y-8 h-full">
+                <li><a href="#home" class="text-3xl font-medium text-light hover:text-primary transition-colors duration-300 relative group">
+                    Home
+                    <span class="absolute -bottom-1 left-1/4 right-1/4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+                </a></li>
+                <li><a href="#skills" class="text-3xl font-medium text-light hover:text-primary transition-colors duration-300 relative group">
+                    Skills
+                    <span class="absolute -bottom-1 left-1/4 right-1/4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+                </a></li>
+                <li><a href="#education" class="text-3xl font-medium text-light hover:text-primary transition-colors duration-300 relative group">
+                    Education
+                    <span class="absolute -bottom-1 left-1/4 right-1/4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+                </a></li>
+                <li><a href="#contacts" class="text-3xl font-medium text-light hover:text-primary transition-colors duration-300 relative group">
+                    Contact
+                    <span class="absolute -bottom-1 left-1/4 right-1/4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+                </a></li>
+            </ul>
+            <button id="close-menu" class="absolute top-8 right-8 text-3xl text-light">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen bg-darker flex items-center pt-24 pb-12 lg:pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-72 h-72 md:w-96 md:h-96 bg-primary rounded-full filter blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-0 left-0 w-72 h-72 md:w-96 md:h-96 bg-accent rounded-full filter blur-3xl animate-pulse-slow animation-delay-2000"></div>
+        </div>
+        
+        <!-- Animated background particles REMOVED for performance -->
+        <!-- <div id="particles-js" class="absolute inset-0 opacity-30"></div> -->
+        
+        <div class="w-11/12 max-w-6xl mx-auto z-10">
+            <div class="grid lg:grid-cols-5 gap-12 items-center">
+                <div class="lg:col-span-3 space-y-6 text-center lg:text-left">
+                    <div class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                        <h1>Jonah <span class="gradient-text">Quadros</span></h1>
+                    </div>
+                    <h2 class="text-xl md:text-2xl text-primary font-semibold inline-block relative">
+                        <span class="relative z-10">Creative Technologist & Student</span>
+                        <span class="absolute bottom-0 left-0 w-full h-3 bg-primary/20 -z-0"></span>
+                    </h2>
+                    <p class="text-lg text-gray max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        I'm a creative and tech-savvy individual with a passion for leveraging AI and technology to solve problems and create impactful content. With experience in video and photo editing, web development, and a growing YouTube channel, I bring a unique blend of creativity and technical expertise.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+                        <a href="#contact" class="px-8 py-3 bg-primary hover:bg-accent border-2 border-primary text-light font-semibold rounded-full transition-all duration-300 text-center transform hover:scale-105 btn-glow group">
+                            <span class="relative z-10 group-hover:tracking-wider transition-all duration-300">Get In Touch</span>
+                        </a>
+                        <a href="#skills" class="px-8 py-3 bg-transparent hover:bg-light/10 border-2 border-light text-light font-semibold rounded-full transition-all duration-300 text-center transform hover:scale-105 hover:border-primary/70 group">
+                            <span class="group-hover:text-primary transition-all duration-300">View My Skills</span>
+                        </a>
+                    </div>
+                    
+                    
+                </div>
+                <div class="lg:col-span-2 flex justify-center order-first lg:order-last">
+                    <div class="w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-primary/50 shadow-xl p-1 animate-float relative group overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="w-full h-full rounded-full overflow-hidden relative z-10">
+                            <img src="pfp.jpg" alt="Jonah Quadros" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-accent/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        </div>
+                        <div class="absolute inset-0 border-4 border-transparent rounded-full group-hover:border-primary/30 group-hover:scale-110 transition-all duration-500"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 lg:py-32 bg-dark relative">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-primary rounded-full filter blur-3xl animate-pulse-slow"></div>
+        </div>
+        <div class="w-11/12 max-w-6xl mx-auto z-10 relative">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center lg:text-left">
+                <span class="gradient-text">My</span> Skills
+                <div class="h-1 w-24 bg-gradient-to-r from-primary to-accent mt-4 rounded-full"></div>
+            </h2>
+            
+            <!-- Skill Categories -->
+            <div class="flex items-center justify-center lg:justify-start mb-12 overflow-x-auto scrollbar-hide">
+                <div class="flex gap-4 py-2" id="skill-categories">
+                    <button class="skill-cat-btn px-6 py-2 bg-darker border border-primary/50 text-light rounded-full hover:bg-primary/20 transition-all duration-300 whitespace-nowrap active" data-category="all">All Skills</button>
+                    <button class="skill-cat-btn px-6 py-2 bg-darker border border-white/10 text-light rounded-full hover:bg-primary/20 transition-all duration-300 whitespace-nowrap" data-category="tech">Technical</button>
+                    <button class="skill-cat-btn px-6 py-2 bg-darker border border-white/10 text-light rounded-full hover:bg-primary/20 transition-all duration-300 whitespace-nowrap" data-category="soft">Soft Skills</button>
+                </div>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="skills-container">
+                <!-- Skill Card 1 -->
+                <div class="skill-card group bg-darker border border-white/10 hover:border-primary/50 p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10" data-category="tech">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                        <i class="fas fa-video relative z-10"></i>
+                        <div class="absolute -inset-4 bg-primary/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-light">Video & Photo Editing</h3>
+                    <p class="text-gray group-hover:text-light/80 transition-colors duration-300">Proficient in Adobe Premiere Pro, CapCut, and Adobe Photoshop creating stunning visual content.</p>
+                    <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-accent mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
+                </div>
+                
+                <!-- Skill Card 2 -->
+                <div class="skill-card group bg-darker border border-white/10 hover:border-primary/50 p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10" data-category="tech">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                        <i class="fas fa-robot relative z-10"></i>
+                        <div class="absolute -inset-4 bg-primary/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-light">AI Tools</h3>
+                    <p class="text-gray group-hover:text-light/80 transition-colors duration-300">Leveraging advanced AI for image generation, video effects, and innovative text design solutions.</p>
+                    <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-accent mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
+                </div>
+                
+                <!-- Skill Card 3 -->
+                <div class="skill-card group bg-darker border border-white/10 hover:border-primary/50 p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10" data-category="tech">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                        <i class="fas fa-code relative z-10"></i>
+                        <div class="absolute -inset-4 bg-primary/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-light">Web Development</h3>
+                    <p class="text-gray group-hover:text-light/80 transition-colors duration-300">Knowledgeable in HTML, CSS, JavaScript, and Python to create responsive and interactive web experiences.</p>
+                    <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-accent mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
+                </div>
+                
+                <!-- Skill Card 4 -->
+                <div class="skill-card group bg-darker border border-white/10 hover:border-primary/50 p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10" data-category="tech">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                        <i class="fas fa-brain relative z-10"></i>
+                        <div class="absolute -inset-4 bg-primary/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-light">AI Solutions</h3>
+                    <p class="text-gray group-hover:text-light/80 transition-colors duration-300">Implementing intelligent AI-driven solutions to streamline processes and enhance productivity.</p>
+                    <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-accent mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
+                </div>
+                
+                <!-- Skill Card 5 -->
+                <div class="skill-card group bg-darker border border-white/10 hover:border-primary/50 p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10" data-category="soft">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                        <i class="fas fa-users relative z-10"></i>
+                        <div class="absolute -inset-4 bg-primary/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-light">Leadership</h3>
+                    <p class="text-gray group-hover:text-light/80 transition-colors duration-300">Proven team-building and leadership skills developed through sports and collaborative projects.</p>
+                    <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-accent mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
+                </div>
+                
+                <!-- Skill Card 6 -->
+                <div class="skill-card group bg-darker border border-white/10 hover:border-primary/50 p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10" data-category="soft">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                        <i class="fas fa-comments relative z-10"></i>
+                        <div class="absolute -inset-4 bg-primary/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-light">Communication</h3>
+                    <p class="text-gray group-hover:text-light/80 transition-colors duration-300">Excellent interpersonal skills for effective collaboration and clear communication in team environments.</p>
+                    <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-accent mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
+                </div>
+                
+                <!-- Added new skill cards -->
+                <div class="skill-card group bg-darker border border-white/10 hover:border-primary/50 p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10" data-category="tech">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                        <i class="fas fa-layer-group relative z-10"></i>
+                        <div class="absolute -inset-4 bg-primary/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-light">UI/UX Design</h3>
+                    <p class="text-gray group-hover:text-light/80 transition-colors duration-300">Creating intuitive and visually appealing user interfaces with strong focus on user experience.</p>
+                    <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-accent mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
+                </div>
+                
+                <div class="skill-card group bg-darker border border-white/10 hover:border-primary/50 p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10" data-category="soft">
+                    <div class="text-5xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                        <i class="fas fa-lightbulb relative z-10"></i>
+                        <div class="absolute -inset-4 bg-primary/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-light">Creative Problem Solving</h3>
+                    <p class="text-gray group-hover:text-light/80 transition-colors duration-300">Approaching challenges with innovative solutions and thinking outside conventional boundaries.</p>
+                    <div class="h-0.5 w-0 bg-gradient-to-r from-primary to-accent mt-6 group-hover:w-full transition-all duration-700 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 lg:py-32 bg-darker relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+             <div class="absolute bottom-0 left-0 w-72 h-72 md:w-96 md:h-96 bg-primary rounded-full filter blur-3xl animate-pulse-slow animation-delay-4000"></div>
+             <div class="absolute top-1/4 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-accent rounded-full filter blur-3xl animate-pulse-slow animation-delay-6000"></div>
+        </div>
+        <div class="w-11/12 max-w-6xl mx-auto relative z-10">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center lg:text-left">
+                <span class="gradient-text">Education</span> & Experience
+                <div class="h-1 w-24 bg-gradient-to-r from-primary to-accent mt-4 rounded-full"></div>
+            </h2>
+            
+            <div class="timeline relative max-w-3xl mx-auto lg:max-w-none">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item mb-12 md:mb-8 pl-12 md:pl-0 md:pr-16 md:w-1/2 relative">
+                    <div class="bg-dark border border-white/10 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 transition-all duration-500 transform md:hover:-translate-x-2 hover:scale-105">
+                        <div class="bg-primary/20 text-primary font-semibold mb-3 text-sm inline-block px-3 py-1 rounded-full">March 2022</div>
+                        <h3 class="text-xl font-bold mb-3 text-light">Secured 82.6% in SSC</h3>
+                        <p class="text-gray">St. Mary's High School, Kalina</p>
+                        <div class="flex items-center mt-4">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-primary"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray">Secondary Education</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item mb-12 md:mb-8 pl-12 md:pl-16 md:w-1/2 md:left-1/2 relative">
+                    <div class="bg-dark border border-white/10 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 transition-all duration-500 transform md:hover:translate-x-2 hover:scale-105">
+                        <div class="bg-primary/20 text-primary font-semibold mb-3 text-sm inline-block px-3 py-1 rounded-full">September 2022 - March 2024</div>
+                        <h3 class="text-xl font-bold mb-3 text-light">Secured 81.83% in HSC</h3>
+                        <p class="text-gray">St. Xavier's College, Fort</p>
+                        <div class="flex items-center mt-4">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                                <i class="fas fa-school text-primary"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray">Higher Secondary Education</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item mb-12 md:mb-8 pl-12 md:pl-0 md:pr-16 md:w-1/2 relative">
+                     <div class="bg-dark border border-white/10 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 transition-all duration-500 transform md:hover:-translate-x-2 hover:scale-105">
+                        <div class="bg-primary/20 text-primary font-semibold mb-3 text-sm inline-block px-3 py-1 rounded-full">October 2024 - Present</div>
+                        <h3 class="text-xl font-bold mb-3 text-light">Bachelors in Technology</h3>
+                        <p class="text-gray">Fr. Conceicao Rodrigues College of Engineering</p>
+                        <div class="flex items-center mt-4">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                                <i class="fas fa-university text-primary"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray">Undergraduate Studies</span>
+                        </div>
+                     </div>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item mb-12 md:mb-8 pl-12 md:pl-16 md:w-1/2 md:left-1/2 relative">
+                     <div class="bg-dark border border-white/10 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 transition-all duration-500 transform md:hover:translate-x-2 hover:scale-105">
+                        <div class="bg-primary/20 text-primary font-semibold mb-3 text-sm inline-block px-3 py-1 rounded-full">August 2024</div>
+                        <h3 class="text-xl font-bold mb-3 text-light">Mastery Manifestor</h3>
+                        <p class="text-gray">Launched a YouTube channel, achieving 3,000+ views quickly.</p>
+                        <div class="flex items-center mt-4">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                                <i class="fab fa-youtube text-primary"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray">Content Creation</span>
+                        </div>
+                     </div>
+                </div>
+
+                <div class="timeline-item mb-12 md:mb-8 pl-12 md:pl-0 md:pr-16 md:w-1/2 relative">
+                    <div class="bg-dark border border-white/10 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 transition-all duration-500 transform md:hover:-translate-x-2 hover:scale-105">
+                       <div class="bg-primary/20 text-primary font-semibold mb-3 text-sm inline-block px-3 py-1 rounded-full">March 2025</div>
+                       <h3 class="text-xl font-bold mb-3 text-light">Won 3rd place in RGIT Sharkathon</h3>
+                       <p class="text-gray">Came third in my first ever Shark tank event</p>
+                       <div class="flex items-center mt-4">
+                           <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                               <i class="fas fa-code text-primary"></i>
+                           </div>
+                           <span class="ml-2 text-sm text-gray">Event participation</span>
+                       </div>
+                    </div>
+               </div>
+            </div>
+            
+            
+
+    <!-- Contact Section -->
+    <section id="contacts" class="py-20 lg:py-32 bg-dark relative overflow-hidden">
+         <div class="absolute inset-0 opacity-5">
+             <div class="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-primary rounded-full filter blur-3xl animate-pulse-slow animation-delay-8000"></div>
+             <div class="absolute bottom-1/4 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-accent rounded-full filter blur-3xl animate-pulse-slow animation-delay-10000"></div>
+        </div>
+        <div class="w-11/12 max-w-6xl mx-auto relative z-10">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center lg:text-left">
+                <span class="gradient-text">Get</span> In Touch
+                <div class="h-1 w-24 bg-gradient-to-r from-primary to-accent mt-4 rounded-full"></div>
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Contact Info & Socials -->
+                <div class="space-y-10">
+                    <div class="contact-item flex items-start space-x-5 p-4 hover:bg-darker transition-all duration-300 rounded-xl hover:shadow-lg hover:shadow-primary/5 group">
+                        <div class="mt-1 w-14 h-14 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center text-primary text-xl flex-shrink-0 group-hover:bg-primary/20 transition-all duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1 text-light">Email</h3>
+                            <a href="mailto:jonahquadros@gmail.com" class="text-gray hover:text-primary transition-colors duration-300 text-lg group-hover:text-light/80">jonahquadros@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item flex items-start space-x-5 p-4 hover:bg-darker transition-all duration-300 rounded-xl hover:shadow-lg hover:shadow-primary/5 group">
+                        <div class="mt-1 w-14 h-14 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center text-primary text-xl flex-shrink-0 group-hover:bg-primary/20 transition-all duration-300">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1 text-light">Phone</h3>
+                            <a href="tel:+919769587241" class="text-gray hover:text-primary transition-colors duration-300 text-lg group-hover:text-light/80">+91 9769587241</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item flex items-start space-x-5 p-4 hover:bg-darker transition-all duration-300 rounded-xl hover:shadow-lg hover:shadow-primary/5 group">
+                        <div class="mt-1 w-14 h-14 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center text-primary text-xl flex-shrink-0 group-hover:bg-primary/20 transition-all duration-300">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1 text-light">Location</h3>
+                            <p class="text-gray text-lg group-hover:text-light/80">Mumbai Suburban, India</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media Links -->
+                    <div class="contact-item pt-6">
+                        <h3 class="text-xl font-semibold mb-5 text-light">Find Me On</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/jonah-quadros-ab91b3323/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-12 h-12 rounded-full bg-darker border border-white/10 hover:bg-primary hover:border-primary text-light flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30 hover:scale-110">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="https://github.com/Jonah260706" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="w-12 h-12 rounded-full bg-darker border border-white/10 hover:bg-primary hover:border-primary text-light flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30 hover:scale-110">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="https://www.instagram.com/quadrosjonah/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="w-12 h-12 rounded-full bg-darker border border-white/10 hover:bg-primary hover:border-primary text-light flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30 hover:scale-110">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <!-- Added YouTube link -->
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel" class="w-12 h-12 rounded-full bg-darker border border-white/10 hover:bg-primary hover:border-primary text-light flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30 hover:scale-110">
+                                <i class="fab fa-youtube text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-item bg-darker border border-white/10 p-8 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="text-sm text-gray/80 mb-1 block">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-4 bg-white/5 border border-white/10 rounded-lg focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-primary text-light placeholder-gray/60 transition-all duration-300" placeholder="Enter your name" required>
+                        </div>
+                        <div>
+                             <label for="email" class="text-sm text-gray/80 mb-1 block">Your Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-4 bg-white/5 border border-white/10 rounded-lg focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-primary text-light placeholder-gray/60 transition-all duration-300" placeholder="Enter your email" required>
+                        </div>
+                        <div>
+                             <label for="subject" class="text-sm text-gray/80 mb-1 block">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full p-4 bg-white/5 border border-white/10 rounded-lg focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-primary text-light placeholder-gray/60 transition-all duration-300" placeholder="What is this about?" required>
+                        </div>
+                        <div>
+                             <label for="message" class="text-sm text-gray/80 mb-1 block">Your Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full p-4 bg-white/5 border border-white/10 rounded-lg focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-primary text-light placeholder-gray/60 transition-all duration-300 resize-y" placeholder="Tell me about your project or inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-8 py-4 bg-primary hover:bg-accent text-light font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark focus:ring-primary relative overflow-hidden group">
+                            <span class="relative z-10 group-hover:tracking-wider transition-all duration-300">Send Message</span>
+                            <span class="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Resume Download Button - Enhanced -->
+            <div class="mt-16 text-center">
+                <a href="Resume.pdf" download class="inline-flex items-center gap-3 px-8 py-4 bg-transparent hover:bg-primary text-light font-semibold rounded-full border-2 border-primary transition-all duration-300 group transform hover:scale-105 hover:shadow-lg hover:shadow-primary/30 relative overflow-hidden">
+                    <span class="relative z-10 group-hover:tracking-wider transition-all duration-300">Download Resume</span>
+                    <i class="fas fa-file-download text-lg group-hover:animate-bounce relative z-10"></i>
+                    <span class="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-darker border-t border-white/10">
+        <div class="w-11/12 max-w-6xl mx-auto text-center">
+            <div class="mb-6">
+                <a href="#home" class="text-3xl font-bold gradient-text">JQ</a>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#home" class="text-light hover:text-primary transition-colors duration-300">Home</a>
+                <a href="#skills" class="text-light hover:text-primary transition-colors duration-300">Skills</a>
+                <a href="#education" class="text-light hover:text-primary transition-colors duration-300">Education</a>
+                <a href="#contacts" class="text-light hover:text-primary transition-colors duration-300">Contact</a>
+            </div>
+            <p class="text-gray">&copy; 2025 Jonah Quadros. All Rights Reserved.</p>
+            <!-- Back to top button - Improved -->
+            <div class="flex justify-center mt-6">
+                <a href="#home" class="w-10 h-10 rounded-full bg-primary/20 border border-primary/30 hover:bg-primary flex items-center justify-center text-light transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    
+    
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-x-full');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-x-full');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            });
+        });
+
+        // Sticky Header Effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-3', 'shadow-lg');
+                header.classList.remove('py-5');
+            } else {
+                header.classList.add('py-5');
+                header.classList.remove('py-3', 'shadow-lg');
+            }
+        });
+        
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            document.querySelector('.progress-bar').style.width = scrollPercentage + '%';
+        });
+        
+        
+       
+        
+        // Reveal animations - enhanced
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, { threshold: 0.08 });
+        
+        document.querySelectorAll('.skill-card, .timeline-item, .contact-item, .counter, h2').forEach((el, index) => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            // Add staggered delay based on index
+            el.style.transitionDelay = `${index * 100}ms`;
+            observer.observe(el);
+        });
+        
+        // Counter animation
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const duration = 2000; // 2 seconds
+                    let startTime = null;
+                    
+                    function updateCounter(timestamp) {
+                        if (!startTime) startTime = timestamp;
+                        const elapsed = timestamp - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        
+                        const currentValue = Math.floor(progress * target);
+                        counter.textContent = currentValue;
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target;
+                        }
+                    }
+                    
+                    requestAnimationFrame(updateCounter);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.counter').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+        
+        // Skill category filter
+        const filterButtons = document.querySelectorAll('.skill-cat-btn');
+        const skillCards = document.querySelectorAll('.skill-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active', 'border-primary/50', 'bg-primary/20'));
+                button.classList.add('active', 'border-primary/50', 'bg-primary/20');
+                
+                const category = button.getAttribute('data-category');
+                
+                skillCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Particles.js configuration REMOVED for performance
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80, // Adjust for header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission animation
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                // Show sending state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+                
+                // Simulate sending (replace with actual form handling)
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i> Message Sent!';
+                    submitBtn.classList.add('bg-green-600');
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Reset button after a delay
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.classList.remove('bg-green-600');
+                    }, 3000);
+                }, 2000);
+            });
+        }
+        
+        // Add active class to current section in navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('#nav-links a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary');
+                link.querySelector('span').classList.remove('w-full');
+                link.querySelector('span').classList.add('w-0');
+                
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-primary');
+                    link.querySelector('span').classList.remove('w-0');
+                    link.querySelector('span').classList.add('w-full');
+                }
+            });
+        });
+        
+        // Initialize with a slight delay to ensure DOM is fully loaded
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                // Trigger scroll event to set active nav item on page load
+                window.dispatchEvent(new Event('scroll'));
+                
+                // Add entrance animation to hero section elements
+                const heroElements = document.querySelectorAll('#home h1, #home h2, #home p, #home .flex');
+                heroElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('animate-fadeIn');
+                    }, 300 * index);
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
